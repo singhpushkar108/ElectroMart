@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* font-family:Arial, Helvetica, sans-serif */
+}
+
+#product-list{
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.card{
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    opacity: 0.8;
+    border-radius: 15px;
+    /* height: 400px; */
+}
+
+.card-title{
+    font-size:small;
+    text-decoration: none;
+    color: black;
+    display: -webkit-box; /* Set the display mode to a block container */
+    -webkit-line-clamp: 2; /* Limit the number of lines to 2 */
+    -webkit-box-orient: vertical; /* Set the direction of the flexible items */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Replace overflow with ellipsis (...) */
+}
+
+.custom{
+    overflow-y:auto;
+    max-height:300px ;
+  }
+
+.card-title:hover{
+    color: palevioletred
+}
+
+
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+::-webkit-scrollbar-thumb {
+    background-color: #393939;
+    border-radius: 5px;
+  }

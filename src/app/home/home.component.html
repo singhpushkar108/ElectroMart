@@ -1,0 +1,220 @@
+<div class="container-fluid ">
+
+    <header class="row mb-3" > 
+
+        <section id="header-row1" class="row my-0 ">
+            <div id="head-nest-left" class="col-3 fw-semibold d-flex align-items-center justify-content-center">
+                <img class="col-6 me-3"  src="../../assets/plug.png" alt="icon" routerLink = "/home">
+                <span class="col-6 fs-4 text-black">ElectroMart</span>
+            </div>
+
+
+            <div id="head-nest-middle" class="col-5 px-0  align-self-center d-flex justify-content-evenly rounded-3 border border-secondary align-items-center " style="height: 72%;">
+
+
+                <!-- <div class="col-11 mx-0 float-start d-flex align-items-center justify-content-evenly " style="width:26rem;">
+                    <input type="text" placeholder="Please Type to search" name="search" class=" form-control border-0" style=" width:75% ; height:2.5rem ;">
+                    <button class="text-dark btn border border-warning fw-semibold" style="font-size: small; cursor: pointer;">All Categories</button>
+                </div> -->
+
+
+                <div class="input-group" style="width:90%;height: 85%;">
+                    <input type="text" class="border-0 form-control ps-2 fw-semibold" placeholder="Type To Search" aria-label="Type To Search" aria-describedby="button-addon2" >
+
+                    <!-- <button class="px-1 bg-white text-dark border-0 border-start btn btn-outline-secondary fw-semibold" type="button" id="button-addon2" style="font-size: small;">All Categories</button> -->
+
+                        <div class="dropdown">
+                            <button class="px-1 bg-white text-dark h-100 rounded-0 border-0 border-start btn btn-outline-secondary fw-semibold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="button-addon2"  style="font-size: small;">
+                                All Categories
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    
+
+                  </div>
+
+                <div class="col-1 border-0 rounded-3 bg-primary d-flex justify-content-center align-items-center" style="height:2rem; cursor: pointer;">
+                    <img src="../../assets/loupe.png" style="width:22px;" alt="search_icon">
+                </div>
+                
+            </div>
+
+            <div id="head-nest-right" id="user_action" class="col-4 px-0 mx-0 d-flex justify-content-around align-items-center">
+                <ul class="list-unstyled col-3 mx-0 px-4 text-center d-flex justify-content-between align-items-center w-50" >
+
+
+                    <li><img data-bs-toggle="modal" data-bs-target="#signIn" (mouseover)="user_icon = true" (mouseout)="user_icon = false" [src]="user_icon ? '../../assets/profile-user.png' : '../../assets/user.png'" alt="user_icon"></li> 
+                    <li><img (mouseover)="fav_icon = true" (mouseout)="fav_icon = false" [src]="fav_icon ? '../../assets/heart.png' : '../../assets/love.png'" alt="fav_icon"></li>
+                    <li><img (mouseover)="cart_icon = true" (mouseout)="cart_icon = false" [src]="cart_icon ? '../../assets/grocery-store.png' : '../../assets/shopping-cart.png'" alt="cart_icon"></li>
+                </ul>
+
+                <div class="text-black d-flex align-items-center justify-content-evenly w-50">
+                    <span class="fw-semibold">Account Credit</span>
+                    <span class="currency">$100</span>
+                </div>
+
+            </div>
+
+
+        </section>
+        
+        <section id="header-row2" class="row bg-primary d-flex align-items-center justify-content-around">
+            <div id="options"  class="col-4 fw-semibold px-1">
+                <ul>
+                    <li routerLink="/main/home" routerLinkActive="active">Home</li>
+                    <li routerLink="/main/products" routerLinkActive="active">Products</li>
+                    <li routerLink="/main/categories" routerLinkActive="active">Categories</li>
+                    <li routerLink="/main/campaign" routerLinkActive="active">Campaign</li>
+                    <li routerLink="/main/offer" routerLinkActive="active">Offer</li>
+    
+                </ul>
+            </div>
+            
+            
+        </section>
+        
+        
+    </header>
+
+    <main class="row">
+
+        <section id="main-left" class="col-2">
+
+            <div class="ms-2 rounded-3 ">
+                
+                <div class="row my-2">
+                    
+                    <ul class="list-unstyled">
+    
+                        <li (mouseover)="office_icon = true" (mouseout)="office_icon = false" class="row">
+                            
+                            <div class="col-12 my-2 ">
+                                <img class="" [src]="office_icon ? '../../assets/company.png' : '../../assets/office.png'" alt="icon" style="width:25px;">
+                                <span class="">Office Devices</span>
+                            </div>
+                            <hr class="hr ">
+                        </li>
+        
+                        <li (mouseover)="solar_icon = true" (mouseout)="solar_icon = false" class="row ">
+                           
+                            <div class="col-12 my-2 ">
+                                <img [src]="solar_icon ? '../../assets/blue-solar.png' : '../../assets/black-solar.png'" alt="solar_icon" style="width:25px;">
+                                <span >Renewable</span>
+                            </div>
+                            <hr class="hr ">
+
+                        </li>
+        
+                        <li (mouseover)="bulb_icon = true" (mouseout)="bulb_icon = false"  class="row ">
+                         
+                            <div class="col-12 my-2 ">
+                                <img [src]="bulb_icon ? '../../assets/blue-bulb.png' : '../../assets/black-bulb.png'" alt="bulb_icon" style="width:25px;">
+
+                                <span >Indoor Lights</span>
+                            </div>
+                            <hr class="hr ">
+
+                        </li>
+        
+                        <li (mouseover)="battery_icon = true" (mouseout)="battery_icon = false"  class="row ">
+                           
+                            <div class="col-12 my-2 ">
+                                <img [src]="battery_icon ? '../../assets/blue-battery.png' : '../../assets/black-battery.png'" alt="battery_icon" style="width:25px;">
+                                <span >Charging Devices</span>
+                            </div>
+
+                        </li>
+    
+                    </ul>
+                </div>
+               
+            </div>
+            
+         
+        </section>
+
+        <section id="main-right" class="col-10">
+            <router-outlet></router-outlet>
+
+        </section>
+
+        <!-- <section id="main-right" class="col-10 d-flex flex-column justify-content-center align-items-center">
+
+            <div id="product-list" class="row w-100 d-flex justify-content-center align-items-center" >
+                <div class="card col-2 align-items-center m-3 border-0 pb-3 " style=" height:18rem;" *ngFor="let product of allProducts">
+                    <img class="w-100" [src]="product.image || '../../assets/no-image.jpg'" style="height:8rem;"  class="card-img-top w-100" alt="{{product.category}}">
+        
+                    <div class="card-body custom-scroll d-flex flex-column justify-content-between px-2">
+                        <a href="#" class="card-title fw-semibold">{{product.title.trim()}}</a>
+                        <div>
+                            <p><b class="text-success fs-6">Price</b> : ₹ {{product.price}}</p>
+                            <p><b class="text-success fs-6">Rating</b> : {{product.rating.rate}}/5 </p>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-primary fw-semibold" >
+                                <span>Add to Cart</span>  
+                                <img src='../../assets/grocery-store.png' style="width : 10%" alt="cart_icon"></a>
+                            <a href="#" class="btn btn-secondary fw-semibold ">Buy Now <img src='../../assets/shopping-bag.png' style="width : 10%" alt="bag_icon"></a>
+
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="row w-50">
+
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="1">1</a></li>
+                      <li class="page-item"><a class="page-link" href="2">2</a></li>
+                      <li class="page-item"><a class="page-link" href="3">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+
+            </div>
+               
+         
+            
+            
+        </section> -->
+
+    </main>
+
+    <footer class="row w-100">
+
+    </footer>
+</div>
+
+            <!--SignIn Modal -->
+        
+<!-- <div class="modal fade d-flex justify-content-center align-items-center" id="signIn" tabindex="-1" aria-labelledby="signIn" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="signIn">Sign Up</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+            <!--SignIn Modal -->
